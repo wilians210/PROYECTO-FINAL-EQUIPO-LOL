@@ -1,0 +1,34 @@
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title> Cajero automtico </title>
+        <link rel="stylesheet" href="estilo index.css">
+    </head>
+    
+    <body>
+        <section class="form-login">
+            <h5>Login</h5>
+            <form action="">
+                <label class="titu" for="">Carnet</label>
+                <input type="text" class="inicio" name="carne" id="" maxlength="11" minlength="11">
+                <label class="titu" for="">Pin</label>
+                <input type="password" class="inicio" name="contra" id=""> 
+                <input type="button" class="boton" value="Ingresar" onclick="login(this.form)">
+                
+
+        </form>
+
+        <script>
+            function login (form){
+                if (form.contra.value=="2021") {
+                    location="moneda.html";
+                } else {
+                    alert("Pin incorrecto");
+                }
+            }
+
+
+        </script>
+
+    </body>
+</html>

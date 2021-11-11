@@ -1,0 +1,74 @@
+<html>
+    <html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title> Cajero</title>
+        <link rel="stylesheet" href="estilo cajero dolar.css">
+        <img src="logo.png" class="imagen">
+    </head>
+    
+    <body>
+        <section class="form-login">
+        <h5></h5>
+        <form action="">
+        <label class="titu" for="">Saldo en Dolares:</label>
+        <input class="retiro" type="text" class="money" name="cantidad2" id="D" value="1000" readonly="readonly">
+        <br>
+    </form>
+
+<br>
+        <form action="">
+            <input class="retiro1" type="text" name="retiros" id="Reti" placeholder="Ingrese la cantidad">
+            <br>
+            <h2>Funciones del cajero</h2>
+            <input class="boton" type="button" value="Retirar" id="retiro dolar" onclick="formula2()">
+            <input input class="boton" type="button" value="consultar" id="consultar dolares" onclick="formula4()">
+            <input class="boton" type="button" value="Salir" id="exit" onclick="salir1()">
+            <br>
+            <br>
+        </form>
+        <h4>Puede ver su saldo restante en la parte superior, al momento de que su saldo 
+            sea insuficiente para seguir realizando transacciones se le notificara.</h4>
+
+
+
+            <script>
+
+            
+
+                function formula2 (){
+                    var cantidad2=parseInt(document.getElementById ("D").value);
+                    var retiros=parseInt(document.getElementById("Reti").value);
+                    document.getElementById("D").value=(cantidad2-retiros);
+
+                    while (cantidad2<=0) {
+                        alert ("No cuenta con los fondos suficientes para relizar la transaccion, su saldo actual es de $"+cantidad2+  " POR FAVOR RETIRESE");
+                    }
+                }
+               
+                
+                function formula4 (){
+                    var cantidad2=parseInt(document.getElementById("D").value);
+                    alert("Su saldo es de: $"+cantidad2);
+                }
+                
+
+               function salir1 (){
+                alert("GRACIAS POR USAR NUESTRO CAJERO INVOCADOR");
+               }
+        
+
+
+
+
+                
+
+
+                
+                
+            </script>
+
+    </body>
+    
+</html>
+</html>

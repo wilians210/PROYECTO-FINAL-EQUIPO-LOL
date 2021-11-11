@@ -1,0 +1,39 @@
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title> tipo de moneda </title>
+        <link rel="stylesheet" href="estilo moneda.css">
+    </head>
+    
+    <body>
+        <section class="form-login">
+            <h5>Tipo de monedas</h5>
+            <form action="">
+                <select class="select" name="coin" id="coin">
+                    <option class="opciones" value="">Seleecione el tipo de moneda</option>
+                    <option class="opciones" value="1">Dolares</option>
+                    <option class="opciones" value="2">Quetzales</option>
+
+                    <input class="clik" type="button" value="validar" onclick="validar();">
+                </select>
+        </form>
+
+        <script>
+
+              function validar (){
+                var tipodemoneda=document.getElementById("coin");
+
+                if (tipodemoneda.value==1) {
+                    location="cajero dolar.html";
+                }
+
+                if (tipodemoneda.value==2) {
+                    location="cajero quetzal.html";
+                }
+            }
+
+
+        </script>
+
+    </body>
+</html>
